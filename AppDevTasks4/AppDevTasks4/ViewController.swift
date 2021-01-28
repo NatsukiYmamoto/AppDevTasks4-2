@@ -8,16 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var indicateTotal: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    var num: Int = 0
+    @IBOutlet private weak var indicateTotal: UILabel!
+
+    private var num: Int = 0
+
     @IBAction func plusButton(_ sender: Any) {
         num += 1
         indicateTotal.text = "\(num)"
     }
+
     @IBAction func clearButton(_ sender: Any) {
         num = 0
         indicateTotal.text = "\(num)"
